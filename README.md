@@ -9,4 +9,4 @@
 ## Деплой
 
 - GitHub Pages: https://kachmarandrew.github.io/kent-landing/
-- Netlify: _буде додано після розгортання_
+- Netlify: https://kent-landing.netlify.app/
