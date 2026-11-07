@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KENT — каталог оригінального одягу та кросівок зі знижками до 60% із зарубіжних платформ. Оплата в гривнях, доставка Новою поштою, Укрпоштою та Meest.">
+    <title>KENT — оригінальний одяг зі знижками до 60%</title>
+
+    <link rel="icon" type="image/webp" href="assets/images/logo-kent.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="assets/images/hero-bg.webp" type="image/webp" fetchpriority="high">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <!-- Tailwind CSS 3.4 — зібрано через CLI (tailwind.config.js містить токени дизайн-системи ЛР4) -->
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link rel="stylesheet" href="css/custom-styles.css">
+</head>
+<body class="bg-kent-bg font-sans text-white antialiased">
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-brand-600 focus:px-4 focus:py-2">Перейти до вмісту</a>
+
+<!-- ═════════ 1. HEADER ═════════ -->
+<header class="sticky top-0 z-40 border-b border-kent-border bg-kent-bg/95 backdrop-blur">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+        <a href="#top" class="flex min-h-11 shrink-0 items-center gap-2 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500" aria-label="KENT — на початок сторінки">
+            <img src="assets/images/logo-kent.webp" alt="Логотип KENT: вішалка з біркою" width="40" height="40" class="h-10 w-10 rounded-lg bg-white object-cover">
+            <span class="text-xl font-extrabold tracking-wide">KE<span class="logo-accent">N</span>T</span>
+        </a>
+        <nav class="hidden lg:block" aria-label="Головна навігація">
+            <ul class="flex items-center gap-1">
+                <li><a href="#benefits" class="nav-link inline-flex min-h-11 items-center rounded-md px-3 text-sm font-medium text-neutral-300 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Переваги</a></li>
+                <li><a href="#how" class="nav-link inline-flex min-h-11 items-center rounded-md px-3 text-sm font-medium text-neutral-300 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Як це працює</a></li>
+                <li><a href="#deals" class="nav-link inline-flex min-h-11 items-center rounded-md px-3 text-sm font-medium text-neutral-300 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Каталог</a></li>
+                <li><a href="#video" class="nav-link inline-flex min-h-11 items-center rounded-md px-3 text-sm font-medium text-neutral-300 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Відео</a></li>
+                <li><a href="#about" class="nav-link inline-flex min-h-11 items-center rounded-md px-3 text-sm font-medium text-neutral-300 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Про нас</a></li>
+                <li><a href="#faq" class="nav-link inline-flex min-h-11 items-center rounded-md px-3 text-sm font-medium text-neutral-300 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">FAQ</a></li>
+                <li><a href="#contacts" class="nav-link inline-flex min-h-11 items-center rounded-md px-3 text-sm font-medium text-neutral-300 transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Контакти</a></li>
+            </ul>
+        </nav>
+        <div class="flex items-center gap-2">
+            <a href="#deals" class="hidden min-h-11 items-center rounded-lg bg-brand-600 px-5 text-sm font-semibold transition-colors duration-200 hover:bg-brand-700 sm:inline-flex focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">До каталогу</a>
+            <button type="button" id="menu-toggle" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobile-menu"
+                    class="grid h-11 w-11 place-items-center rounded-lg text-white transition-colors duration-200 hover:bg-neutral-800 lg:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                <i class="fa-solid fa-bars text-lg" aria-hidden="true" id="menu-icon"></i>
+            </button>
+        </div>
+    </div>
+    <nav id="mobile-menu" class="hidden border-t border-kent-border bg-kent-bg lg:hidden" aria-label="Мобільна навігація">
+        <ul class="mx-auto max-w-7xl space-y-1 px-4 py-3 sm:px-6">
+            <li><a href="#benefits" class="flex min-h-11 items-center rounded-md px-3 text-base font-medium text-neutral-200 transition-colors duration-200 hover:bg-neutral-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Переваги</a></li>
+            <li><a href="#how" class="flex min-h-11 items-center rounded-md px-3 text-base font-medium text-neutral-200 transition-colors duration-200 hover:bg-neutral-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Як це працює</a></li>
+            <li><a href="#deals" class="flex min-h-11 items-center rounded-md px-3 text-base font-medium text-neutral-200 transition-colors duration-200 hover:bg-neutral-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Каталог</a></li>
+            <li><a href="#video" class="flex min-h-11 items-center rounded-md px-3 text-base font-medium text-neutral-200 transition-colors duration-200 hover:bg-neutral-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Відео</a></li>
+            <li><a href="#about" class="flex min-h-11 items-center rounded-md px-3 text-base font-medium text-neutral-200 transition-colors duration-200 hover:bg-neutral-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Про нас</a></li>
+            <li><a href="#faq" class="flex min-h-11 items-center rounded-md px-3 text-base font-medium text-neutral-200 transition-colors duration-200 hover:bg-neutral-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">FAQ</a></li>
+            <li><a href="#contacts" class="flex min-h-11 items-center rounded-md px-3 text-base font-medium text-neutral-200 transition-colors duration-200 hover:bg-neutral-800 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Контакти</a></li>
+            <li><a href="#deals" class="mt-2 flex min-h-11 items-center justify-center rounded-lg bg-brand-600 px-4 text-base font-semibold transition-colors duration-200 hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">До каталогу</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main-content">
+
+    <!-- ═════════ 2. HERO ═════════ -->
+    <section id="top" class="hero-bg" aria-labelledby="hero-heading">
+        <div class="mx-auto grid max-w-7xl items-center gap-8 px-4 py-10 sm:px-6 md:py-20 lg:grid-cols-2 lg:gap-10 lg:px-8 lg:py-28">
+            <div>
+                <p class="inline-flex items-center gap-2 rounded-full border border-kent-border bg-black/40 px-3 py-1 text-xs font-semibold text-neutral-200 sm:text-sm">
+                    <span class="pulse-dot h-2 w-2 rounded-full bg-brand-500" aria-hidden="true"></span> Нові знижки щодня
+                </p>
+                <h1 id="hero-heading" class="text-gradient mt-5 text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">Оригінальний одяг зі знижкою до&nbsp;60%</h1>
+                <p class="mt-5 max-w-xl text-base leading-relaxed text-neutral-300 md:text-lg">Знижки на Nike, Jordan, Adidas та Zara з зарубіжних платформ. Оплата в гривнях, доставка Новою поштою, Укрпоштою або Meest — без митних клопотів.</p>
+                <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                    <a href="#deals" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-8 text-base font-semibold transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 bg-brand-600 text-white shadow-lg shadow-brand-500/30 hover:bg-brand-700 active:bg-brand-700 w-full sm:w-auto">Перейти до каталогу</a>
+                    <a href="#how" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-8 text-base font-semibold transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 border border-neutral-600 hover:border-white hover:bg-white/10 w-full sm:w-auto">Як це працює</a>
+                </div>
+                <p class="mt-6 flex items-center gap-2 text-sm text-neutral-400"><i class="fa-solid fa-bolt text-brand-400" aria-hidden="true"></i> Перевірені знижки · Оплата в ₴ · Доставка НП / Укрпошта / Meest</p>
+            </div>
+            <figure class="mx-auto w-full max-w-md lg:max-w-none">
+                <img src="assets/images/jordan-jump-poster.webp" alt="Ретро-постер: баскетболіст у стрибку з м'ячем на тлі нічного міста" width="900" height="810" fetchpriority="high"
+                     class="w-full rounded-2xl border border-kent-border object-cover shadow-2xl shadow-black/60">
+                <figcaption class="mt-3 text-center text-sm text-neutral-400">Легендарний стрибок — натхнення нашої колекції</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- ═════════ 3. ПЕРЕВАГИ ═════════ -->
+    <section id="benefits" class="border-y border-kent-border bg-kent-alt" aria-labelledby="benefits-heading">
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+            <h2 id="benefits-heading" class="text-2xl font-extrabold sm:text-3xl lg:text-4xl">Чому KENT</h2>
+            <p class="mt-2 max-w-2xl text-sm text-neutral-300 md:text-base">Три причини купувати зі знижкою через нас, а не напряму на зарубіжному сайті.</p>
+            <ul class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <li>
+                    <article class="h-full rounded-xl border border-kent-border bg-kent-card p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-500 hover:shadow-lg hover:shadow-brand-500/10 motion-reduce:transition-none md:p-8">
+                        <img src="assets/images/icon-analytics.webp" alt="" width="64" height="64" loading="lazy" decoding="async" class="mb-5 h-16 w-16 rounded-xl bg-white object-contain p-1">
+                        <h3 class="text-lg font-bold">Перевірені знижки</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-neutral-300 md:text-base">Графік зміни ціни за 60 днів — реальна економія, а не маркетинговий трюк.</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="h-full rounded-xl border border-kent-border bg-kent-card p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-500 hover:shadow-lg hover:shadow-brand-500/10 motion-reduce:transition-none md:p-8">
+                        <img src="assets/images/icon-security.webp" alt="" width="64" height="64" loading="lazy" decoding="async" class="mb-5 h-16 w-16 rounded-xl bg-white object-contain p-1">
+                        <h3 class="text-lg font-bold">Безпечна оплата в ₴</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-neutral-300 md:text-base">Фіксована ціна у гривнях без прихованих комісій, конвертацій і митних сюрпризів.</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="h-full rounded-xl border border-kent-border bg-kent-card p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-500 hover:shadow-lg hover:shadow-brand-500/10 motion-reduce:transition-none md:p-8">
+                        <img src="assets/images/icon-speed.webp" alt="" width="64" height="64" loading="lazy" decoding="async" class="mb-5 h-16 w-16 rounded-xl bg-white object-contain p-1">
+                        <h3 class="text-lg font-bold">Доставка НП, Укрпошта, Meest</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-neutral-300 md:text-base">Відстежуйте замовлення від оформлення до отримання в одному інтерфейсі.</p>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ═════════ 4. ПОСЛУГИ / ЯК ЦЕ ПРАЦЮЄ ═════════ -->
+    <section id="how" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8" aria-labelledby="how-heading">
+        <h2 id="how-heading" class="text-2xl font-extrabold sm:text-3xl lg:text-4xl">Як працює KENT</h2>
+        <div class="mt-8 grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
+            <ol class="space-y-4 text-neutral-300">
+                <li class="flex gap-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-brand-600 text-sm font-bold" aria-hidden="true">1</span><span>Обираєте товар зі знижкою в каталозі та перевіряєте графік ціни.</span></li>
+                <li class="flex gap-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-brand-600 text-sm font-bold" aria-hidden="true">2</span><span>Оплачуєте в гривнях — ми викуповуємо товар на зарубіжній платформі.</span></li>
+                <li class="flex gap-4"><span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-brand-600 text-sm font-bold" aria-hidden="true">3</span><span>Отримуєте посилку Новою поштою, Укрпоштою або Meest і відстежуєте кожен крок.</span></li>
+            </ol>
+            <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <li>
+                    <article class="flex h-full gap-4 rounded-xl border border-kent-border bg-kent-card p-5">
+                        <i class="fa-solid fa-tag mt-1 text-xl text-brand-400" aria-hidden="true"></i>
+                        <div><h3 class="font-bold">Підбір знижок</h3><p class="mt-1 text-sm leading-relaxed text-neutral-300">Збираємо актуальні акції провідних брендів в одному каталозі.</p></div>
+                    </article>
+                </li>
+                <li>
+                    <article class="flex h-full gap-4 rounded-xl border border-kent-border bg-kent-card p-5">
+                        <i class="fa-solid fa-cart-flatbed mt-1 text-xl text-brand-400" aria-hidden="true"></i>
+                        <div><h3 class="font-bold">Викуп під ключ</h3><p class="mt-1 text-sm leading-relaxed text-neutral-300">Оформлюємо замовлення на зарубіжній платформі замість вас.</p></div>
+                    </article>
+                </li>
+                <li>
+                    <article class="flex h-full gap-4 rounded-xl border border-kent-border bg-kent-card p-5">
+                        <i class="fa-solid fa-truck-fast mt-1 text-xl text-brand-400" aria-hidden="true"></i>
+                        <div><h3 class="font-bold">Доставка трьома службами</h3><p class="mt-1 text-sm leading-relaxed text-neutral-300">Накладні Нової пошти, Укрпошти та Meest створюються з CRM.</p></div>
+                    </article>
+                </li>
+                <li>
+                    <article class="flex h-full gap-4 rounded-xl border border-kent-border bg-kent-card p-5">
+                        <i class="fa-solid fa-ruler-combined mt-1 text-xl text-brand-400" aria-hidden="true"></i>
+                        <div><h3 class="font-bold">Підбір розміру</h3><p class="mt-1 text-sm leading-relaxed text-neutral-300">Конвертер міжнародних розмірів нижче на сторінці.</p></div>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ═════════ КАТЕГОРІЇ ═════════ -->
+    <section id="catalog" class="bg-kent-alt" aria-labelledby="categories-heading">
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+            <h2 id="categories-heading" class="text-2xl font-extrabold sm:text-3xl lg:text-4xl">Популярні категорії</h2>
+            <p class="mt-2 text-sm text-neutral-300 md:text-base">Одяг та взуття зі знижками від провідних брендів</p>
+            <ul class="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 lg:gap-6">
+                <li>
+                    <a href="#deals" class="group relative block overflow-hidden rounded-xl border border-kent-border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                        <figure>
+                            <img src="assets/images/sneakers-collage.webp" alt="Колекція кросівок Air Jordan 1 у різних кольорах" width="640" height="800" loading="lazy" decoding="async"
+                                 class="aspect-[4/5] w-full object-cover object-center transition duration-500 group-hover:scale-105 motion-reduce:transition-none">
+                            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-4 pt-12">
+                                <span class="block text-base font-bold md:text-lg">Кросівки Jordan</span>
+                                <span class="block text-sm text-neutral-300">Air Jordan 1 та інші</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#deals" class="group relative block overflow-hidden rounded-xl border border-kent-border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                        <figure>
+                            <img src="assets/images/jordan-23-poster.webp" alt="Постер із баскетболістом у джерсі номер 23" width="640" height="800" loading="lazy" decoding="async"
+                                 class="aspect-[4/5] w-full object-cover object-top transition duration-500 group-hover:scale-105 motion-reduce:transition-none">
+                            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-4 pt-12">
+                                <span class="block text-base font-bold md:text-lg">Баскетбольний одяг</span>
+                                <span class="block text-sm text-neutral-300">Джерсі та форма</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#deals" class="group relative block overflow-hidden rounded-xl border border-kent-border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                        <figure>
+                            <img src="assets/images/travis-painting.webp" alt="Намальовані кросівки Air Jordan 1 коричневого кольору з рожевою шнурівкою" width="640" height="800" loading="lazy" decoding="async"
+                                 class="aspect-[4/5] w-full object-cover object-center transition duration-500 group-hover:scale-105 motion-reduce:transition-none">
+                            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-4 pt-12">
+                                <span class="block text-base font-bold md:text-lg">Лімітовані релізи</span>
+                                <span class="block text-sm text-neutral-300">Рідкісні моделі</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#deals" class="group relative block overflow-hidden rounded-xl border border-kent-border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                        <figure>
+                            <img src="assets/images/jordan-jump-poster.webp" alt="Ретро-постер зі стрибком баскетболіста на тлі міста" width="640" height="800" loading="lazy" decoding="async"
+                                 class="aspect-[4/5] w-full object-cover object-center transition duration-500 group-hover:scale-105 motion-reduce:transition-none">
+                            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-4 pt-12">
+                                <span class="block text-base font-bold md:text-lg">Ретро-колекція</span>
+                                <span class="block text-sm text-neutral-300">Класика 90-х</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ═════════ ТОВАРИ ═════════ -->
+    <section id="deals" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8" aria-labelledby="products-heading">
+        <h2 id="products-heading" class="text-2xl font-extrabold sm:text-3xl lg:text-4xl">Найбільші знижки сьогодні</h2>
+        <p class="mt-2 text-sm text-neutral-300 md:text-base">Товари з підтвердженою економією — перевіреною за графіком ціни</p>
+        <ul class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <li>
+                <article class="group flex h-full flex-col overflow-hidden rounded-xl border border-kent-border bg-kent-card transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 motion-reduce:transition-none">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/sneakers-collage.webp" alt="Кросівки Air Jordan 1 High" width="640" height="480" loading="lazy" decoding="async"
+                             class="aspect-[4/3] w-full object-cover object-top transition duration-500 group-hover:scale-105 motion-reduce:transition-none">
+                        <span class="absolute left-3 top-3 rounded-md bg-brand-600 px-2 py-1 text-xs font-bold"><span class="sr-only">Знижка </span>−45%</span>
+                        <button type="button" aria-pressed="false" aria-label="Додати до вибраного: Air Jordan 1 High Chicago"
+                                class="fav-btn absolute right-3 top-3 grid h-11 w-11 place-items-center rounded-full bg-black/60 text-white backdrop-blur transition-colors duration-200 hover:bg-brand-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 flex-col gap-1 p-4 md:p-5">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-neutral-400">Nike</p>
+                        <h3 class="text-base font-bold md:text-lg">Air Jordan 1 High Chicago</h3>
+                        <p class="mt-1 flex items-baseline gap-2">
+                            <strong class="text-xl font-extrabold">2 890 ₴</strong>
+                            <del class="text-sm text-neutral-400"><span class="sr-only">Стара ціна: </span>5 200 ₴</del>
+                        </p>
+                        <button type="button" class="mt-auto inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-brand-600 px-4 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                            <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> У кошик
+                        </button>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="group flex h-full flex-col overflow-hidden rounded-xl border border-kent-border bg-kent-card transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 motion-reduce:transition-none">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/travis-painting.webp" alt="Коричневі кросівки Air Jordan 1" width="640" height="480" loading="lazy" decoding="async"
+                             class="aspect-[4/3] w-full object-cover object-center transition duration-500 group-hover:scale-105 motion-reduce:transition-none">
+                        <span class="absolute left-3 top-3 rounded-md bg-brand-600 px-2 py-1 text-xs font-bold"><span class="sr-only">Знижка </span>−38%</span>
+                        <button type="button" aria-pressed="false" aria-label="Додати до вибраного: Air Jordan 1 Mocha Low"
+                                class="fav-btn absolute right-3 top-3 grid h-11 w-11 place-items-center rounded-full bg-black/60 text-white backdrop-blur transition-colors duration-200 hover:bg-brand-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 flex-col gap-1 p-4 md:p-5">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-neutral-400">Jordan</p>
+                        <h3 class="text-base font-bold md:text-lg">Air Jordan 1 Mocha Low</h3>
+                        <p class="mt-1 flex items-baseline gap-2">
+                            <strong class="text-xl font-extrabold">3 190 ₴</strong>
+                            <del class="text-sm text-neutral-400"><span class="sr-only">Стара ціна: </span>5 100 ₴</del>
+                        </p>
+                        <button type="button" class="mt-auto inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-brand-600 px-4 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                            <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> У кошик
+                        </button>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="group flex h-full flex-col overflow-hidden rounded-xl border border-kent-border bg-kent-card transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 motion-reduce:transition-none">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/jordan-jump-poster.webp" alt="Принт зі стрибком баскетболіста" width="640" height="480" loading="lazy" decoding="async"
+                             class="aspect-[4/3] w-full object-cover object-center transition duration-500 group-hover:scale-105 motion-reduce:transition-none">
+                        <span class="absolute left-3 top-3 rounded-md bg-brand-600 px-2 py-1 text-xs font-bold"><span class="sr-only">Знижка </span>−52%</span>
+                        <button type="button" aria-pressed="true" aria-label="Прибрати з вибраного: Jumpman Poster Tee"
+                                class="fav-btn absolute right-3 top-3 grid h-11 w-11 place-items-center rounded-full bg-black/60 text-white backdrop-blur transition-colors duration-200 hover:bg-brand-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 flex-col gap-1 p-4 md:p-5">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-neutral-400">Jordan</p>
+                        <h3 class="text-base font-bold md:text-lg">Jumpman Poster Tee</h3>
+                        <p class="mt-1 flex items-baseline gap-2">
+                            <strong class="text-xl font-extrabold">1 890 ₴</strong>
+                            <del class="text-sm text-neutral-400"><span class="sr-only">Стара ціна: </span>3 900 ₴</del>
+                        </p>
+                        <button type="button" class="mt-auto inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-brand-600 px-4 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                            <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> У кошик
+                        </button>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="group flex h-full flex-col overflow-hidden rounded-xl border border-kent-border bg-kent-card transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 motion-reduce:transition-none">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/jordan-23-poster.webp" alt="Червоне баскетбольне джерсі з номером 23" width="640" height="480" loading="lazy" decoding="async"
+                             class="aspect-[4/3] w-full object-cover object-top transition duration-500 group-hover:scale-105 motion-reduce:transition-none">
+                        <span class="absolute left-3 top-3 rounded-md bg-brand-600 px-2 py-1 text-xs font-bold"><span class="sr-only">Знижка </span>−29%</span>
+                        <button type="button" aria-pressed="false" aria-label="Додати до вибраного: Jersey #23 Retro Red"
+                                class="fav-btn absolute right-3 top-3 grid h-11 w-11 place-items-center rounded-full bg-black/60 text-white backdrop-blur transition-colors duration-200 hover:bg-brand-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 flex-col gap-1 p-4 md:p-5">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-neutral-400">Chicago Bulls</p>
+                        <h3 class="text-base font-bold md:text-lg">Jersey #23 Retro Red</h3>
+                        <p class="mt-1 flex items-baseline gap-2">
+                            <strong class="text-xl font-extrabold">890 ₴</strong>
+                            <del class="text-sm text-neutral-400"><span class="sr-only">Стара ціна: </span>1 250 ₴</del>
+                        </p>
+                        <button type="button" class="mt-auto inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-brand-600 px-4 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                            <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> У кошик
+                        </button>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="group flex h-full flex-col overflow-hidden rounded-xl border border-kent-border bg-kent-card transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 motion-reduce:transition-none">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/hero-bg.webp" alt="Червона форма Chicago Bulls для слем-данку" width="640" height="480" loading="lazy" decoding="async"
+                             class="aspect-[4/3] w-full object-cover object-center transition duration-500 group-hover:scale-105 motion-reduce:transition-none">
+                        <span class="absolute left-3 top-3 rounded-md bg-brand-600 px-2 py-1 text-xs font-bold"><span class="sr-only">Знижка </span>−60%</span>
+                        <button type="button" aria-pressed="false" aria-label="Додати до вибраного: Dunk Contest Red Jersey"
+                                class="fav-btn absolute right-3 top-3 grid h-11 w-11 place-items-center rounded-full bg-black/60 text-white backdrop-blur transition-colors duration-200 hover:bg-brand-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 flex-col gap-1 p-4 md:p-5">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-neutral-400">Nike</p>
+                        <h3 class="text-base font-bold md:text-lg">Dunk Contest Red Jersey</h3>
+                        <p class="mt-1 flex items-baseline gap-2">
+                            <strong class="text-xl font-extrabold">1 290 ₴</strong>
+                            <del class="text-sm text-neutral-400"><span class="sr-only">Стара ціна: </span>3 200 ₴</del>
+                        </p>
+                        <button type="button" class="mt-auto inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-brand-600 px-4 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                            <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> У кошик
+                        </button>
+                    </div>
+                </article>
+            </li>
+            <li>
+                <article class="group flex h-full flex-col overflow-hidden rounded-xl border border-kent-border bg-kent-card transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/60 motion-reduce:transition-none">
+                    <div class="relative overflow-hidden">
+                        <img src="assets/images/sneakers-collage.webp" alt="Кросівки Air Jordan 1 Mid коричневі" width="640" height="480" loading="lazy" decoding="async"
+                             class="aspect-[4/3] w-full object-cover object-bottom transition duration-500 group-hover:scale-105 motion-reduce:transition-none">
+                        <span class="absolute left-3 top-3 rounded-md bg-brand-600 px-2 py-1 text-xs font-bold"><span class="sr-only">Знижка </span>−33%</span>
+                        <button type="button" aria-pressed="false" aria-label="Додати до вибраного: Air Jordan 1 Mid Brown"
+                                class="fav-btn absolute right-3 top-3 grid h-11 w-11 place-items-center rounded-full bg-black/60 text-white backdrop-blur transition-colors duration-200 hover:bg-brand-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 flex-col gap-1 p-4 md:p-5">
+                        <p class="text-xs font-semibold uppercase tracking-wider text-neutral-400">Jordan</p>
+                        <h3 class="text-base font-bold md:text-lg">Air Jordan 1 Mid Brown</h3>
+                        <p class="mt-1 flex items-baseline gap-2">
+                            <strong class="text-xl font-extrabold">2 490 ₴</strong>
+                            <del class="text-sm text-neutral-400"><span class="sr-only">Стара ціна: </span>3 700 ₴</del>
+                        </p>
+                        <button type="button" class="mt-auto inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-brand-600 px-4 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                            <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> У кошик
+                        </button>
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ═════════ ІНСТРУМЕНТИ: конвертер + курс валют ═════════ -->
+    <section id="tools" class="border-y border-kent-border bg-kent-alt" aria-labelledby="tools-heading">
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+            <h2 id="tools-heading" class="text-2xl font-extrabold sm:text-3xl lg:text-4xl">Інструменти покупця</h2>
+            <p class="mt-2 max-w-2xl text-sm text-neutral-300 md:text-base">Дізнайся свій розмір і прикинь ціну зарубіжного товару в гривнях за офіційним курсом НБУ.</p>
+            <div class="mt-8 grid gap-6 lg:grid-cols-2">
+
+                <section id="size-converter" aria-labelledby="size-heading" class="rounded-xl border border-kent-border bg-kent-card p-5 md:p-6">
+                    <h3 id="size-heading" class="text-lg font-bold">Конвертер розмірів</h3>
+                    <form id="size-form" class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2" aria-label="Конвертер розмірів" novalidate>
+                        <div>
+                            <label for="size-input" class="sr-only">Ваш розмір</label>
+                            <input type="text" id="size-input" placeholder="Ваш розмір (S, M, L, XL)" autocomplete="off" class="min-h-11 w-full rounded-lg border border-kent-border bg-kent-bg px-4 text-base text-white placeholder:text-neutral-400 transition-colors duration-200 hover:border-neutral-500 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50">
+                        </div>
+                        <div>
+                            <label for="brand-select" class="sr-only">Бренд або категорія</label>
+                            <select id="brand-select" class="min-h-11 w-full rounded-lg border border-kent-border bg-kent-bg px-4 text-base text-white placeholder:text-neutral-400 transition-colors duration-200 hover:border-neutral-500 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50">
+                                <option value="">Бренд / Категорія</option>
+                                <option value="nike">Nike</option>
+                                <option value="jordan">Jordan</option>
+                                <option value="adidas">Adidas</option>
+                                <option value="zara">Zara</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-brand-600 px-6 text-sm font-semibold transition-colors duration-200 hover:bg-brand-700 sm:col-span-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                            <i class="fa-solid fa-arrows-left-right" aria-hidden="true"></i> Конвертувати
+                        </button>
+                    </form>
+                    <output id="size-result" for="size-input brand-select" aria-live="polite" class="mt-4 flex min-h-11 items-center gap-2 text-sm font-semibold text-brand-400">
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i><span id="size-result-text">EU 38 / UK 6 / US 8</span>
+                    </output>
+                </section>
+
+                <!-- WIDGET: інформер курсів валют НБУ (open data API, оновлюється при завантаженні сторінки) -->
+                <aside id="rates" aria-labelledby="rates-heading" class="rounded-xl border border-kent-border bg-kent-card p-5 md:p-6">
+                    <h3 id="rates-heading" class="text-lg font-bold">Курс валют НБУ</h3>
+                    <p class="mt-1 text-sm text-neutral-400">Станом на <time id="rates-date" datetime="">—</time></p>
+                    <dl id="rates-list" class="mt-4 grid grid-cols-3 gap-3 text-center" aria-live="polite">
+                        <div class="rounded-lg bg-kent-bg p-3"><dt class="text-xs font-semibold text-neutral-400">USD</dt><dd class="mt-1 text-lg font-extrabold" data-rate="USD">—</dd></div>
+                        <div class="rounded-lg bg-kent-bg p-3"><dt class="text-xs font-semibold text-neutral-400">EUR</dt><dd class="mt-1 text-lg font-extrabold" data-rate="EUR">—</dd></div>
+                        <div class="rounded-lg bg-kent-bg p-3"><dt class="text-xs font-semibold text-neutral-400">PLN</dt><dd class="mt-1 text-lg font-extrabold" data-rate="PLN">—</dd></div>
+                    </dl>
+                    <form id="rates-form" class="mt-4 grid grid-cols-[1fr_auto] gap-3" aria-label="Калькулятор ціни в гривнях" novalidate>
+                        <div>
+                            <label for="rates-amount" class="sr-only">Ціна товару у валюті</label>
+                            <input type="number" id="rates-amount" inputmode="decimal" min="0" step="0.01" placeholder="Ціна товару" class="min-h-11 w-full rounded-lg border border-kent-border bg-kent-bg px-4 text-base text-white placeholder:text-neutral-400 transition-colors duration-200 hover:border-neutral-500 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50">
+                        </div>
+                        <div>
+                            <label for="rates-currency" class="sr-only">Валюта</label>
+                            <select id="rates-currency" class="min-h-11 w-full rounded-lg border border-kent-border bg-kent-bg px-4 text-base text-white placeholder:text-neutral-400 transition-colors duration-200 hover:border-neutral-500 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50"><option>USD</option><option>EUR</option><option>PLN</option></select>
+                        </div>
+                    </form>
+                    <p id="rates-result" class="mt-3 min-h-6 text-sm font-semibold text-brand-400" aria-live="polite">Введіть ціну, щоб побачити суму в гривнях.</p>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═════════ МЕДІА: відео ═════════ -->
+    <section id="video" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8" aria-labelledby="video-heading">
+        <h2 id="video-heading" class="text-2xl font-extrabold sm:text-3xl lg:text-4xl">Відео: як відрізнити оригінал</h2>
+        <p class="mt-2 max-w-2xl text-sm text-neutral-300 md:text-base">Наш промо-ролик і розбір від сторонньої експертної спільноти: на що дивитись при купівлі Air Jordan 1.</p>
+        <div class="mt-8 grid gap-8 lg:grid-cols-2">
+            <figure>
+                <video controls preload="none" playsinline class="aspect-video w-full rounded-xl border border-kent-border bg-black shadow-lg" poster="assets/images/hero-bg.webp" aria-describedby="video-caption">
+                    <source src="assets/video/video_content.mp4" type="video/mp4">
+                    Ваш браузер не підтримує відтворення відео.
+                </video>
+                <figcaption id="video-caption" class="mt-3 text-sm text-neutral-400">Промо-ролик KENT</figcaption>
+            </figure>
+
+            <!-- MEDIA: YouTube — контейнер 16:9 (aspect-video), lazy-завантаження, youtube-nocookie без cookies до кліку -->
+            <figure>
+                <div class="aspect-video w-full overflow-hidden rounded-xl border border-kent-border bg-black shadow-lg">
+                    <iframe class="h-full w-full border-0"
+                            src="https://www.youtube-nocookie.com/embed/teGONv4Z0Po?rel=0"
+                            title="Відео YouTube: як відрізнити підробку Air Jordan 1"
+                            loading="lazy"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                </div>
+                <figcaption class="mt-3 text-sm text-neutral-400">How to spot FAKE Air Jordan 1 — канал Rose Anvil (YouTube, англійською)</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- ═════════ 8. ПРО НАС ═════════ -->
+    <section id="about" class="bg-kent-alt" aria-labelledby="about-heading">
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+            <h2 id="about-heading" class="text-2xl font-extrabold sm:text-3xl lg:text-4xl">Про KENT</h2>
+            <p class="mt-3 max-w-3xl text-sm leading-relaxed text-neutral-300 md:text-base">KENT — каталог оригінального одягу та взуття зі знижок зарубіжних платформ. За кожним замовленням стоїть повний цикл у нашій CRM: від виставлення товару до створення накладної Нової пошти, Укрпошти чи Meest. Покупцеві не потрібно розбиратися з валютою, міжнародною оплатою та митницею.</p>
+            <h3 class="mt-10 text-xl font-bold">Кому підійде KENT</h3>
+            <ul class="mt-4 grid grid-cols-1 gap-6 md:grid-cols-3">
+                <li>
+                    <article class="h-full rounded-xl border border-kent-border bg-kent-card p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-500 hover:shadow-lg hover:shadow-brand-500/10 motion-reduce:transition-none md:p-8">
+                        <i class="fa-solid fa-shoe-prints mb-4 text-2xl text-brand-400" aria-hidden="true"></i>
+                        <h3 class="text-lg font-bold">Колекціонерам кросівок</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-neutral-300 md:text-base">Шукаєте конкретну модель Jordan чи Nike за адекватною ціною та без ризику підробки.</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="h-full rounded-xl border border-kent-border bg-kent-card p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-500 hover:shadow-lg hover:shadow-brand-500/10 motion-reduce:transition-none md:p-8">
+                        <i class="fa-solid fa-piggy-bank mb-4 text-2xl text-brand-400" aria-hidden="true"></i>
+                        <h3 class="text-lg font-bold">Тим, хто економить</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-neutral-300 md:text-base">Хочете оригінал із знижкою, яку можна перевірити на графіку ціни за 60 днів.</p>
+                    </article>
+                </li>
+                <li>
+                    <article class="h-full rounded-xl border border-kent-border bg-kent-card p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-500 hover:shadow-lg hover:shadow-brand-500/10 motion-reduce:transition-none md:p-8">
+                        <i class="fa-solid fa-hryvnia-sign mb-4 text-2xl text-brand-400" aria-hidden="true"></i>
+                        <h3 class="text-lg font-bold">Тим, хто не хоче міжнародних платежів</h3>
+                        <p class="mt-2 text-sm leading-relaxed text-neutral-300 md:text-base">Платите в гривнях, а викуп і доставку беремо на себе.</p>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ═════════ FAQ ═════════ -->
+    <section id="faq" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" class="text-2xl font-extrabold sm:text-3xl lg:text-4xl">Часті питання</h2>
+        <div class="mt-8 max-w-3xl space-y-3">
+            <details class="group rounded-xl border border-kent-border bg-kent-card">
+                <summary class="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 rounded-xl px-5 py-3 font-semibold transition-colors duration-200 hover:bg-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                    Як я плачу за товар?<i class="fa-solid fa-chevron-down shrink-0 text-sm text-brand-400 transition-transform duration-200 group-open:rotate-180 motion-reduce:transition-none" aria-hidden="true"></i>
+                </summary>
+                <p class="px-5 pb-5 text-sm leading-relaxed text-neutral-300 md:text-base">Усі розрахунки — у гривнях за фіксованою ціною в каталозі. Валютна конвертація та міжнародні платежі — на нашому боці.</p>
+            </details>
+            <details class="group rounded-xl border border-kent-border bg-kent-card">
+                <summary class="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 rounded-xl px-5 py-3 font-semibold transition-colors duration-200 hover:bg-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                    Якою службою приходить посилка?<i class="fa-solid fa-chevron-down shrink-0 text-sm text-brand-400 transition-transform duration-200 group-open:rotate-180 motion-reduce:transition-none" aria-hidden="true"></i>
+                </summary>
+                <p class="px-5 pb-5 text-sm leading-relaxed text-neutral-300 md:text-base">Можна обрати Нову пошту, Укрпошту або Meest. Статус відправлення відображається в особистому кабінеті.</p>
+            </details>
+            <details class="group rounded-xl border border-kent-border bg-kent-card">
+                <summary class="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 rounded-xl px-5 py-3 font-semibold transition-colors duration-200 hover:bg-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                    Як перевірити, що знижка реальна?<i class="fa-solid fa-chevron-down shrink-0 text-sm text-brand-400 transition-transform duration-200 group-open:rotate-180 motion-reduce:transition-none" aria-hidden="true"></i>
+                </summary>
+                <p class="px-5 pb-5 text-sm leading-relaxed text-neutral-300 md:text-base">У картці товару є графік зміни ціни за останні 60 днів: видно, чи ціну штучно завищували перед акцією.</p>
+            </details>
+            <details class="group rounded-xl border border-kent-border bg-kent-card">
+                <summary class="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 rounded-xl px-5 py-3 font-semibold transition-colors duration-200 hover:bg-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                    Як підібрати розмір?<i class="fa-solid fa-chevron-down shrink-0 text-sm text-brand-400 transition-transform duration-200 group-open:rotate-180 motion-reduce:transition-none" aria-hidden="true"></i>
+                </summary>
+                <p class="px-5 pb-5 text-sm leading-relaxed text-neutral-300 md:text-base">Скористайтесь конвертером розмірів на цій сторінці — він показує відповідність EU, UK та US для обраного бренду.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- ═════════ 10. CTA ═════════ -->
+    <section class="border-y border-kent-border bg-gradient-to-r from-brand-700 to-brand-600" aria-labelledby="cta-heading">
+        <div class="mx-auto flex max-w-7xl flex-col items-start gap-6 px-4 py-12 sm:px-6 md:flex-row md:items-center md:justify-between md:py-14 lg:px-8">
+            <div>
+                <h2 id="cta-heading" class="text-2xl font-extrabold sm:text-3xl">Знайдіть свою пару зі знижкою</h2>
+                <p class="mt-2 max-w-xl text-white/90">Перегляньте каталог або напишіть нам — підберемо модель і розмір.</p>
+            </div>
+            <div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+                <a href="#deals" class="inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-8 text-base font-semibold text-kent-bg transition-colors duration-200 hover:bg-neutral-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Перейти до каталогу</a>
+                <a href="#contacts" class="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/70 px-8 text-base font-semibold transition-colors duration-200 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Написати нам</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═════════ КОНТАКТИ + MAP ═════════ -->
+    <section id="contacts" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8" aria-labelledby="contacts-heading">
+        <h2 id="contacts-heading" class="text-2xl font-extrabold sm:text-3xl lg:text-4xl">Контакти</h2>
+        <p class="mt-2 text-sm text-neutral-300 md:text-base">Напишіть нам — відповімо протягом 2 годин у робочий час</p>
+        <div class="mt-8 grid gap-8 lg:grid-cols-2">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="grid grid-cols-1 gap-4" aria-label="Форма зворотного зв'язку">
+                <input type="hidden" name="form-name" value="contact">
+                <p class="hidden"><label>Не заповнюйте: <input name="bot-field"></label></p>
+                <div>
+                    <label for="contact-name" class="mb-1.5 block text-sm font-medium">Ваше ім'я <abbr title="обов'язкове поле" class="text-brand-400 no-underline">*</abbr></label>
+                    <input type="text" id="contact-name" name="name" required autocomplete="name" class="min-h-11 w-full rounded-lg border border-kent-border bg-kent-bg px-4 text-base text-white placeholder:text-neutral-400 transition-colors duration-200 hover:border-neutral-500 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50">
+                </div>
+                <div>
+                    <label for="contact-phone" class="mb-1.5 block text-sm font-medium">Номер телефону <abbr title="обов'язкове поле" class="text-brand-400 no-underline">*</abbr></label>
+                    <input type="tel" id="contact-phone" name="phone" required autocomplete="tel" placeholder="+380..." class="min-h-11 w-full rounded-lg border border-kent-border bg-kent-bg px-4 text-base text-white placeholder:text-neutral-400 transition-colors duration-200 hover:border-neutral-500 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50">
+                </div>
+                <div>
+                    <label for="contact-message" class="mb-1.5 block text-sm font-medium">Повідомлення <abbr title="обов'язкове поле" class="text-brand-400 no-underline">*</abbr></label>
+                    <textarea id="contact-message" name="message" rows="4" maxlength="500" required aria-describedby="message-hint" class="min-h-28 w-full resize-y rounded-lg border border-kent-border bg-kent-bg p-4 text-base text-white transition-colors duration-200 hover:border-neutral-500 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/50"></textarea>
+                    <small id="message-hint" class="mt-1 block text-xs text-neutral-400">До 500 символів</small>
+                </div>
+                <label class="flex min-h-11 cursor-pointer items-center gap-3 text-sm text-neutral-300">
+                    <input type="checkbox" name="consent" required class="consent-box h-5 w-5 shrink-0 cursor-pointer appearance-none rounded border border-neutral-500 bg-kent-bg transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                    Я погоджуюсь на обробку персональних даних
+                </label>
+                <button type="submit" class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-brand-600 px-6 text-base font-semibold transition-colors duration-200 hover:bg-brand-700 sm:w-auto sm:justify-self-start focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Надіслати повідомлення
+                </button>
+            </form>
+
+            <div class="flex flex-col gap-4">
+                <address class="not-italic text-neutral-300">
+                    <p class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-brand-400" aria-hidden="true"></i><span>м. Львів, пл. Ринок, 1<br><span class="text-sm text-neutral-400">Офіс та пункт самовивозу</span></span></p>
+                    <p class="mt-3"><a href="mailto:hello@kent.ua" class="inline-flex min-h-11 items-center gap-3 rounded transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"><i class="fa-solid fa-envelope text-brand-400" aria-hidden="true"></i> hello@kent.ua</a></p>
+                </address>
+                <!-- MEDIA: Google Maps — висота задана контейнером, lazy-завантаження, title для скрінрідерів -->
+                <div class="h-72 w-full overflow-hidden rounded-xl border border-kent-border shadow-lg lg:h-auto lg:min-h-80 lg:flex-1">
+                    <iframe class="h-full w-full border-0"
+                            src="https://www.google.com/maps?q=%D0%BF%D0%BB.%20%D0%A0%D0%B8%D0%BD%D0%BE%D0%BA%2C%201%2C%20%D0%9B%D1%8C%D0%B2%D1%96%D0%B2&amp;z=16&amp;output=embed"
+                            title="Карта Google: офіс KENT, м. Львів, пл. Ринок, 1"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ═════════ 11. FOOTER ═════════ -->
+<footer class="border-t border-kent-border bg-black px-4 py-10 text-neutral-300 sm:px-6 md:py-12 lg:px-8">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div>
+            <a href="#top" class="inline-flex min-h-11 items-center gap-2 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500" aria-label="KENT — на початок сторінки">
+                <img src="assets/images/logo-kent.webp" alt="Логотип KENT" width="36" height="36" loading="lazy" class="h-9 w-9 rounded-lg bg-white object-cover">
+                <span class="text-xl font-extrabold text-white">KE<span class="logo-accent">N</span>T</span>
+            </a>
+            <p class="mt-3 max-w-xs text-sm leading-relaxed md:text-base">Каталог оригінального одягу зі знижок зарубіжних платформ. Оплата в гривнях без митних ризиків.</p>
+        </div>
+        <nav aria-labelledby="footer-catalog">
+            <h2 id="footer-catalog" class="mb-2 font-semibold text-white">Каталог</h2>
+            <ul>
+                <li><a href="#catalog" class="inline-flex min-h-11 items-center rounded text-sm text-neutral-300 transition-colors duration-200 hover:text-white md:text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Категорії</a></li>
+                <li><a href="#deals" class="inline-flex min-h-11 items-center rounded text-sm text-neutral-300 transition-colors duration-200 hover:text-white md:text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Знижки сьогодні</a></li>
+                <li><a href="#tools" class="inline-flex min-h-11 items-center rounded text-sm text-neutral-300 transition-colors duration-200 hover:text-white md:text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Таблиця розмірів</a></li>
+            </ul>
+        </nav>
+        <nav aria-labelledby="footer-info">
+            <h2 id="footer-info" class="mb-2 font-semibold text-white">Інформація</h2>
+            <ul>
+                <li><a href="#how" class="inline-flex min-h-11 items-center rounded text-sm text-neutral-300 transition-colors duration-200 hover:text-white md:text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Як це працює</a></li>
+                <li><a href="#faq" class="inline-flex min-h-11 items-center rounded text-sm text-neutral-300 transition-colors duration-200 hover:text-white md:text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Часті питання</a></li>
+                <li><a href="#contacts" class="inline-flex min-h-11 items-center rounded text-sm text-neutral-300 transition-colors duration-200 hover:text-white md:text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500">Контакти</a></li>
+            </ul>
+        </nav>
+        <div>
+            <h2 id="footer-contact" class="mb-2 font-semibold text-white">Ми в мережі</h2>
+            <ul class="flex gap-3">
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (відкриється в новій вкладці)" title="Instagram" class="grid h-11 w-11 place-items-center rounded-full border border-neutral-700 text-neutral-300 transition duration-200 hover:border-brand-500 hover:bg-brand-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="Telegram (відкриється в новій вкладці)" title="Telegram" class="grid h-11 w-11 place-items-center rounded-full border border-neutral-700 text-neutral-300 transition duration-200 hover:border-brand-500 hover:bg-brand-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"><i class="fa-brands fa-telegram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (відкриється в новій вкладці)" title="Facebook" class="grid h-11 w-11 place-items-center rounded-full border border-neutral-700 text-neutral-300 transition duration-200 hover:border-brand-500 hover:bg-brand-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <p class="border-t border-neutral-800 pt-5 text-sm text-neutral-400 md:col-span-2 lg:col-span-4">© 2026 KENT. Всі права захищені.</p>
+    </div>
+</footer>
+
+<script>
+    // Мобільне меню
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('menu-icon');
+    toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('hidden') === false;
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Закрити меню' : 'Відкрити меню');
+        icon.className = open ? 'fa-solid fa-xmark text-lg' : 'fa-solid fa-bars text-lg';
+    });
+    menu.addEventListener('click', e => {
+        if (e.target.closest('a')) toggle.click();
+    });
+
+    // Вибране: перемикання aria-pressed та іконки
+    document.querySelectorAll('.fav-btn').forEach(btn => btn.addEventListener('click', () => {
+        const on = btn.getAttribute('aria-pressed') !== 'true';
+        btn.setAttribute('aria-pressed', String(on));
+        btn.firstElementChild.className = (on ? 'fa-solid' : 'fa-regular') + ' fa-heart';
+        const name = btn.getAttribute('aria-label').split(': ')[1];
+        btn.setAttribute('aria-label', (on ? 'Прибрати з вибраного: ' : 'Додати до вибраного: ') + name);
+    }));
+
+    // Конвертер розмірів
+    const sizes = {S: 'EU 36 / UK 4 / US 6', M: 'EU 38 / UK 6 / US 8', L: 'EU 40 / UK 8 / US 10', XL: 'EU 42 / UK 10 / US 12'};
+    document.getElementById('size-form').addEventListener('submit', e => {
+        e.preventDefault();
+        const v = document.getElementById('size-input').value.trim().toUpperCase();
+        document.getElementById('size-result-text').textContent = sizes[v] || 'Введіть S, M, L або XL';
+    });
+
+    // WIDGET: курси валют НБУ (open data API) + калькулятор у гривні
+    const rates = {};
+    const amountEl = document.getElementById('rates-amount');
+    const curEl = document.getElementById('rates-currency');
+    const resultEl = document.getElementById('rates-result');
+    const fmt = new Intl.NumberFormat('uk-UA', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    function recalc() {
+        const a = parseFloat(amountEl.value);
+        if (!rates[curEl.value]) return;
+        resultEl.textContent = a > 0 ? a + ' ' + curEl.value + ' ≈ ' + fmt.format(a * rates[curEl.value]) + ' ₴'
+            : 'Введіть ціну, щоб побачити суму в гривнях.';
+    }
+    amountEl.addEventListener('input', recalc);
+    curEl.addEventListener('change', recalc);
+    document.getElementById('rates-form').addEventListener('submit', e => e.preventDefault());
+    fetch('https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
+        .then(r => r.json())
+        .then(list => {
+            list.filter(i => ['USD', 'EUR', 'PLN'].includes(i.cc)).forEach(i => {
+                rates[i.cc] = i.rate;
+                document.querySelector('[data-rate="' + i.cc + '"]').textContent = fmt.format(i.rate);
+            });
+            const [d, m, y] = list[0].exchangedate.split('.');
+            const t = document.getElementById('rates-date');
+            t.textContent = list[0].exchangedate;
+            t.dateTime = y + '-' + m + '-' + d;
+            recalc();
+        })
+        .catch(() => {
+            resultEl.textContent = 'Курс тимчасово недоступний. Спробуйте пізніше.';
+        });
+</script>
+</body>
+</html>
