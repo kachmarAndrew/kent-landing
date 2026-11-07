@@ -1,6 +1,6 @@
 /** Конфігурація Tailwind CSS (токени дизайн-системи ЛР4). Збірка: npx tailwindcss -i tailwind.input.css -o css/tailwind.min.css --minify */
 module.exports = {
-  content: ['./index.html'],
+  content: ['./index.html', './assets/js/contact-validation.js'],
   theme: {
     extend: {
       fontFamily: { sans: ['Inter', 'Segoe UI', 'Arial', 'sans-serif'] },
