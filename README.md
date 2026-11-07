@@ -5,3 +5,8 @@
 - Стек: HTML5, Tailwind CSS, мінімальний JS
 - Запуск локально: відкрийте `index.html` у браузері
 - Структура: `index.html`, `css/`, `assets/images/`, `assets/video/`
+
+## Деплой
+
+- GitHub Pages: https://kachmarandrew.github.io/kent-landing/
+- Netlify: _буде додано після розгортання_
